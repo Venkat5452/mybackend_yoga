@@ -65,7 +65,16 @@ server.post("/verify",(req,res)=>{
             })
         }
         else {
-            res.send({message : "Verified"});
+            paymentd.findOne({email:email}).then((user1)=>{
+                if(user1) {
+                    if(user1.paymentstatus=="No") {
+                        res.send({message:"Payment"})
+                    }
+                    else {
+                        res.send({message : "Verified"});
+                    }
+                }
+            })
         }
     }
     else {

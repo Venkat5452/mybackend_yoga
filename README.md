@@ -5,7 +5,6 @@ FrontEnd : https://github.com/Venkat5452/myfrontend_yoga
 BackEnd : https://github.com/Venkat5452/mybackend_yoga
 
 TechStack :
-
 1. FrontEnd : Reactjs,Bootstrap,Css.
 2. BackEnd  : MongoDB,Nodejs,Expressjs.
 

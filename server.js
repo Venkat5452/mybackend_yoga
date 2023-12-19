@@ -143,6 +143,14 @@ server.post("/payment",(req,res)=>{
     })
 })
 
-server.listen(9002,() =>{
-    console.log("Started at port 9002");
+server.post("/details",(req,res)=>{
+    const {day}=req.body;
+    var cnt=0;
+    User.find({day:day}).then((user)=>{
+        res.send({message:user.length})   
+    })
+})
+
+server.listen(9005,() =>{
+    console.log("Started at port 9005");
 })
